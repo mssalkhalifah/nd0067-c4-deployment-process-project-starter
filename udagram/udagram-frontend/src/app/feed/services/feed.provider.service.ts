@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FeedItem, feedItemMocks } from '../models/feed-item.model';
+import { FeedItem } from '../models/feed-item.model';
 import { BehaviorSubject } from 'rxjs';
 
 import { ApiService } from '../../api/api.service';
@@ -25,5 +25,4 @@ export class FeedProviderService {
     this.currentFeed$.next(feed);
     return res;
   }
-
 }
