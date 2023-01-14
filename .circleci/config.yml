@@ -54,11 +54,13 @@ jobs:
           node-version: "14.15"
       - eb/setup
       - aws-cli/setup
-      - checkout
+      - checkout:
+        path: ~/udagram/udagram-api
       - run:
-          name: Set enviroment key
+          name: Set Enviroment Key
           command: |
             eb setenv key=AWS_ACCESS_KEY_ID
+      - checkout
       - run:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
