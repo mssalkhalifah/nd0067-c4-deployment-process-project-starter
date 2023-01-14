@@ -55,7 +55,7 @@ jobs:
       - eb/setup
       - aws-cli/setup
       - checkout:
-        path: ~/udagram/udagram-api
+          path: ~/udagram/udagram-api
       - run:
           name: Set Enviroment Key
           command: |
