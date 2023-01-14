@@ -56,6 +56,10 @@ jobs:
       - aws-cli/setup
       - checkout
       - run:
+          name: Set enviroment key
+          command: |
+            eb setenv key=AWS_ACCESS_KEY_ID
+      - run:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
